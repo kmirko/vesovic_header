@@ -82,5 +82,28 @@
         voluptatibus officiis aliquam dolores iste quam, voluptatum ex?
       </p>
     </section>
+
+
+    <script>
+      const navbar = document.getElementById('navbar')
+      let scrolled = false
+
+      window.onscroll = function(){
+        if(window.pageYOffset > 100){
+          navbar.classList.remove('top')
+          if(!scrolled){
+            navbar.style.transform = 'translateY(-70px)'
+          }
+          setTimeout(function(){
+            navbar.style.transform = 'translateY(0)'
+            scrolled = true;
+          },500)
+        }else{
+          navbar.classList.add('top')
+          scrolled = false
+        }
+      }
+
+    </script>
   </body>
 </html>
